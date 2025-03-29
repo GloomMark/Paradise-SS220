@@ -67,35 +67,35 @@
 
 /obj/item/kitchen/utensil/fork
 	name = "fork"
-	desc = "Это вилка. Один удар - четыре дырки."
+	desc = "It's a fork. Sure is pointy."
 	icon_state = "fork"
 
 /obj/item/kitchen/utensil/pfork
 	name = "plastic fork"
-	desc = "Ура, её не нужно мыть!"
+	desc = "Yay, no washing up to do."
 	icon_state = "pfork"
 
 /obj/item/kitchen/utensil/spoon
 	name = "spoon"
-	desc = "Это ложка. Ей можно стукнуть по лбу, а также увидеть в ней свое перевернутое отражение."
+	desc = "It's a spoon. You can see your own upside-down face in it."
 	icon_state = "spoon"
 	attack_verb = list("attacked", "poked")
 
 /obj/item/kitchen/utensil/pspoon
 	name = "plastic spoon"
-	desc = "Это пластиковая ложка. Как скучно."
+	desc = "It's a plastic spoon. How dull."
 	icon_state = "pspoon"
 	attack_verb = list("attacked", "poked")
 
 /obj/item/kitchen/utensil/spork
 	name = "spork"
-	desc = "Это вилколожка. Восхитительный инновационный дизайн."
+	desc = "It's a spork. Marvel at its innovative design."
 	icon_state = "spork"
 	attack_verb = list("attacked", "sporked")
 
 /obj/item/kitchen/utensil/pspork
 	name = "plastic spork"
-	desc = "Это пластиковая вилколожка. Не соответствует ничьим ожиданиям!"
+	desc = "It's a plastic spork. It's the fork side of the spoon!"
 	icon_state = "pspork"
 	attack_verb = list("attacked", "sporked")
 
@@ -105,7 +105,7 @@
 /obj/item/kitchen/knife
 	name = "kitchen knife"
 	icon_state = "knife"
-	desc = "Универсальный поварской нож производства компании Космическая Нарезка. Гарантированно остаётся острым на долгие годы."
+	desc = "A general purpose Chef's Knife made by SpaceCook Incorporated. Guaranteed to stay sharp for years to come."
 	flags = CONDUCT
 	force = 10
 	w_class = WEIGHT_CLASS_SMALL
@@ -133,27 +133,27 @@
 
 /obj/item/kitchen/knife/plastic
 	name = "plastic knife"
-	desc = "Самое тупое из лезвий."
+	desc = "The bluntest of blades."
 	icon_state = "pknife"
 	sharp = FALSE
 
 /obj/item/kitchen/knife/ritual
 	name = "ritual knife"
-	desc = "Сверхъестественные силы, которые когда-то питали этот клинок, теперь бездействуют."
+	desc = "The unearthly energies that once powered this blade are now dormant."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "render"
 	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/kitchen/knife/shiv
 	name = "glass shiv"
-	desc = "Какой-то острый осколок завёрнутый в ткань, так же делала пра-пра-пра-пра-бабушка."
+	desc = "A haphazard sharp object wrapped in cloth, just like great-great-great-great grandma used to make."
 	icon = 'icons/obj/weapons/melee.dmi'
 	item_state = "glass_shiv"
 	icon_state = "glass_shiv"
 
 /obj/item/kitchen/knife/shiv/carrot
 	name = "carrot shiv"
-	desc = "В отличие от других морковок, эту, вероятно, стоит держать подальше от глаз."
+	desc = "Unlike other carrots, you should probably keep this far away from your eyes."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "carrotshiv"
 	item_state = "carrotshiv"
@@ -167,7 +167,7 @@
 /obj/item/kitchen/knife/butcher
 	name = "butcher's cleaver"
 	icon_state = "butch"
-	desc = "Огромный нож, используемый для рубки мяса и его нарезки. Это так же включает продукцию из клоунов."
+	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
 	flags = CONDUCT
 	force = 15
 	throwforce = 8
@@ -183,13 +183,13 @@
 
 /obj/item/kitchen/knife/butcher/meatcleaver/Initialize(mapload)
 	. = ..()
-	ADD_TRAIT(src, TRAIT_BUTCHERS_HUMANS, ROUNDSTART_TRAIT)
+	AddElement(/datum/element/butchers_humans)
 
 /obj/item/kitchen/knife/combat
 	name = "combat knife"
 	icon_state = "combatknife"
 	item_state = "knife"
-	desc = "Военный боевой нож для выживания."
+	desc = "A military combat utility survival knife."
 	force = 20
 	throwforce = 20
 	origin_tech = "materials=3;combat=4"
@@ -199,7 +199,7 @@
 /obj/item/kitchen/knife/combat/survival
 	name = "survival knife"
 	icon_state = "survivalknife"
-	desc = "Охотничий нож для выживания."
+	desc = "A hunting grade survival knife."
 	force = 15
 	throwforce = 15
 
@@ -209,14 +209,14 @@
 	icon_state = "bone_dagger"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
-	desc = "Острый костяной нож. Самый минимум для выживания."
+	desc = "A sharpened bone. The bare minimum in survival."
 	materials = list()
 
 /obj/item/kitchen/knife/combat/cyborg
 	name = "cyborg knife"
 	icon = 'icons/obj/items_cyborg.dmi'
 	icon_state = "knife"
-	desc = "Пласталевый нож, устанавливаемый киборгам. Крайне острый и прочный."
+	desc = "A cyborg-mounted plasteel knife. Extremely sharp and durable."
 	origin_tech = null
 
 /obj/item/kitchen/knife/cheese
@@ -236,8 +236,8 @@
  */
 
 /obj/item/kitchen/rollingpin
-	name = "скалка"
-	desc = "Используется, чтобы вырубить бармена."
+	name = "rolling pin"
+	desc = "Used to knock out the Bartender."
 	icon_state = "rolling_pin"
 	force = 8.0
 	throwforce = 10.0
@@ -252,9 +252,10 @@
  * Candy Moulds
  */
 
-/obj/item/kitchen/mould
+/obj/item/reagent_containers/cooking/mould
 	name = "generic candy mould"
-	desc = "Непонятно, что это вообще такое."
+	desc = "You aren't sure what it's supposed to be."
+	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "mould"
 	force = 5
 	throwforce = 5
@@ -263,67 +264,57 @@
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "smashed")
 
-/obj/item/kitchen/mould/bear
+/obj/item/reagent_containers/cooking/mould/make_mini()
+	transform *= 0.5
+
+/obj/item/reagent_containers/cooking/mould/unmake_mini()
+	transform = null
+
+/obj/item/reagent_containers/cooking/mould/bear
 	name = "bear-shaped candy mould"
-	desc = "Формочка в виде маленького медведя."
+	desc = "It has the shape of a small bear imprinted into it."
 	icon_state = "mould_bear"
 
-/obj/item/kitchen/mould/worm
+/obj/item/reagent_containers/cooking/mould/worm
 	name = "worm-shaped candy mould"
-	desc = "Формочка в виде червячка."
+	desc = "It has the shape of a worm imprinted into it."
 	icon_state = "mould_worm"
 
-/obj/item/kitchen/mould/bean
+/obj/item/reagent_containers/cooking/mould/bean
 	name = "bean-shaped candy mould"
-	desc = "Формочка в виде боба."
+	desc = "It has the shape of a bean imprinted into it."
 	icon_state = "mould_bean"
 
-/obj/item/kitchen/mould/ball
+/obj/item/reagent_containers/cooking/mould/ball
 	name = "ball-shaped candy mould"
-	desc = "Формочка в виде маленькой сферы"
+	desc = "It has a small sphere imprinted into it."
 	icon_state = "mould_ball"
 
-/obj/item/kitchen/mould/cane
+/obj/item/reagent_containers/cooking/mould/cane
 	name = "cane-shaped candy mould"
-	desc = "Формочка в виде трости."
+	desc = "It has the shape of a cane imprinted into it."
 	icon_state = "mould_cane"
 
-/obj/item/kitchen/mould/cash
+/obj/item/reagent_containers/cooking/mould/cash
 	name = "cash-shaped candy mould"
-	desc = "Формочка в виде фальшивых денег"
+	desc = "It has the shape and design of fake money imprinted into it."
 	icon_state = "mould_cash"
 
-/obj/item/kitchen/mould/coin
+/obj/item/reagent_containers/cooking/mould/coin
 	name = "coin-shaped candy mould"
-	desc = "Формочка в виде монеты."
+	desc = "It has the shape of a coin imprinted into it."
 	icon_state = "mould_coin"
 
-/obj/item/kitchen/mould/loli
+/obj/item/reagent_containers/cooking/mould/loli
 	name = "sucker mould"
-	desc = "Формочка в виде леденца."
+	desc = "It has the shape of a sucker imprinted into it."
 	icon_state = "mould_loli"
-
-/*
- * Sushi Mat
- */
-/obj/item/kitchen/sushimat
-	name = "Sushi Mat"
-	desc = "Деревянный коврик для эффективного приготовления суши."
-	icon_state = "sushi_mat"
-	force = 5
-	throwforce = 5
-	throw_speed = 3
-	throw_range = 3
-	w_class = WEIGHT_CLASS_SMALL
-	attack_verb = list("rolled", "cracked", "battered", "thrashed")
-
-
 
 /// circular cutter by Ume
 
 /obj/item/kitchen/cutter
 	name = "generic circular cutter"
-	desc = "Универсальный круглый резак для печенья и других изделий."
+	desc = "A generic circular cutter for cookies and other things."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "circular_cutter"
 	force = 5
